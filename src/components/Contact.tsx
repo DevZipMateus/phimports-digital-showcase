@@ -38,13 +38,20 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contato" className="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white">
-      <div className="container mx-auto px-4">
+    <section 
+      id="contato" 
+      className="py-20 relative"
+      style={{
+        background: 'linear-gradient(135deg, #1e40af 0%, #dc2626 100%)'
+      }}
+    >
+      <div className="absolute inset-0 bg-black/20"></div>
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 font-poppins">
-            Entre em <span className="text-blue-400">Contato</span>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 font-poppins">
+            Entre em <span className="text-yellow-300">Contato</span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-100 max-w-3xl mx-auto leading-relaxed">
             Estamos prontos para atender você! Escolha a forma de contato que preferir 
             e tire todas as suas dúvidas sobre nossos produtos e serviços.
           </p>
@@ -80,7 +87,7 @@ const Contact = () => {
           <Card className="bg-white/10 backdrop-blur-md border-white/20">
             <CardContent className="p-8">
               <div className="flex items-center mb-6">
-                <MapPin className="h-6 w-6 text-blue-400 mr-3" />
+                <MapPin className="h-6 w-6 text-yellow-300 mr-3" />
                 <h3 className="text-2xl font-bold">Nossa Loja</h3>
               </div>
               <div className="space-y-4 text-gray-300">
@@ -92,8 +99,7 @@ const Contact = () => {
                 </p>
                 <Button 
                   onClick={() => window.open('https://share.google/Y9hA3XPjzcuHg0bii', '_blank')}
-                  variant="outline"
-                  className="w-full border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white"
+                  className="w-full bg-white hover:bg-gray-100 text-primary border-2 border-white"
                 >
                   Ver no Google Maps
                 </Button>
@@ -104,7 +110,7 @@ const Contact = () => {
           <Card className="bg-white/10 backdrop-blur-md border-white/20">
             <CardContent className="p-8">
               <div className="flex items-center mb-6">
-                <Clock className="h-6 w-6 text-blue-400 mr-3" />
+                <Clock className="h-6 w-6 text-yellow-300 mr-3" />
                 <h3 className="text-2xl font-bold">Horário de Funcionamento</h3>
               </div>
               <div className="space-y-3 text-gray-300">
@@ -128,7 +134,7 @@ const Contact = () => {
         <div className="text-center bg-white/10 backdrop-blur-md border-white/20 rounded-2xl p-8">
           <h3 className="text-2xl font-bold mb-4">Pronto para adquirir seu iPhone?</h3>
           <p className="text-gray-300 mb-6 text-lg">
-            Entre em contato agora mesmo e garante o melhor preço da Feira dos Importados!
+            Entre em contato agora mesmo e garanta o melhor preço da Feira dos Importados!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
             <Button 
@@ -142,8 +148,7 @@ const Contact = () => {
             <Button 
               size="lg"
               onClick={() => window.open('tel:+5561982865902', '_blank')}
-              variant="outline"
-              className="flex-1 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white"
+              className="flex-1 bg-white hover:bg-gray-100 text-primary border-2 border-white"
             >
               <Phone className="mr-2 h-5 w-5" />
               Ligar Agora
