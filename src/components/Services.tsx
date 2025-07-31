@@ -1,4 +1,3 @@
-
 import { Smartphone, Settings, RefreshCw, ShoppingCart, Wrench, Battery } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -44,9 +43,9 @@ const Services = () => {
   ];
 
   return (
-    <section id="servicos" className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+    <section id="servicos" className="py-20 bg-black/40 backdrop-blur-sm">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-lg">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 font-poppins">
             Nossos <span className="text-primary">Serviços</span>
           </h2>
@@ -60,7 +59,7 @@ const Services = () => {
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
-              <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg overflow-hidden">
+              <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg overflow-hidden bg-white/90 backdrop-blur-sm">
                 <CardContent className="p-6">
                   <div className="bg-gradient-to-br from-primary to-accent w-14 h-14 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                     <Icon className="h-7 w-7 text-white" />
@@ -83,7 +82,7 @@ const Services = () => {
           })}
         </div>
 
-        <div className="text-center bg-white rounded-2xl shadow-lg p-8">
+        <div className="text-center bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg p-8">
           <h3 className="text-2xl font-bold text-gray-900 mb-4">Precisa de um orçamento?</h3>
           <p className="text-gray-600 mb-6">
             Entre em contato conosco para receber um orçamento personalizado e sem compromisso.

@@ -1,4 +1,3 @@
-
 import { Check, Star, Smartphone, CreditCard } from 'lucide-react';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -54,9 +53,9 @@ const Plans = () => {
   ];
 
   return (
-    <section id="planos" className="py-20 bg-white">
+    <section id="planos" className="py-20 bg-black/40 backdrop-blur-sm">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-lg">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 font-poppins">
             Nossos <span className="text-primary">Planos</span> e Ofertas
           </h2>
@@ -67,7 +66,7 @@ const Plans = () => {
 
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           {plans.map((plan, index) => (
-            <Card key={index} className="relative overflow-hidden hover:shadow-2xl transition-all duration-300 border-2 hover:border-primary/20">
+            <Card key={index} className="relative overflow-hidden hover:shadow-2xl transition-all duration-300 border-2 hover:border-primary/20 bg-white/90 backdrop-blur-sm">
               {plan.badge && (
                 <Badge className="absolute top-4 right-4 bg-accent text-white z-10">
                   {plan.badge}

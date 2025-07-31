@@ -1,4 +1,3 @@
-
 import { Star, Quote } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 
@@ -49,9 +48,9 @@ const Testimonials = () => {
   ];
 
   return (
-    <section id="depoimentos" className="py-20 bg-gradient-to-br from-blue-50 to-gray-50">
+    <section id="depoimentos" className="py-20 bg-black/40 backdrop-blur-sm">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-lg">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 font-poppins">
             O que nossos <span className="text-primary">clientes</span> dizem
           </h2>
@@ -63,7 +62,7 @@ const Testimonials = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {testimonials.map((testimonial, index) => (
-            <Card key={index} className="hover:shadow-xl transition-all duration-300 border-0 shadow-lg overflow-hidden">
+            <Card key={index} className="hover:shadow-xl transition-all duration-300 border-0 shadow-lg overflow-hidden bg-white/90 backdrop-blur-sm">
               <CardContent className="p-6">
                 <div className="flex items-center mb-4">
                   <Quote className="h-8 w-8 text-primary/20" />
@@ -95,7 +94,7 @@ const Testimonials = () => {
           ))}
         </div>
 
-        <div className="text-center bg-white rounded-2xl shadow-lg p-8">
+        <div className="text-center bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg p-8">
           <div className="max-w-2xl mx-auto">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
               Junte-se aos nossos clientes satisfeitos!

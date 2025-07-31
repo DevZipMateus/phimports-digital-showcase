@@ -27,9 +27,9 @@ const About = () => {
   ];
 
   return (
-    <section id="sobre" className="py-20 bg-white">
+    <section id="sobre" className="py-20 bg-black/40 backdrop-blur-sm">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-lg">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 font-poppins">
             Sobre a <span className="text-primary">PH IMPORTS BRASÍLIA</span>
           </h2>
@@ -40,7 +40,7 @@ const About = () => {
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
-          <div>
+          <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-lg">
             <h3 className="text-2xl font-bold text-gray-900 mb-6">Nossa História</h3>
             <p className="text-gray-600 mb-6 leading-relaxed">
               A PH IMPORTS BRASÍLIA nasceu com o objetivo de oferecer produtos Apple de qualidade 
@@ -76,7 +76,7 @@ const About = () => {
           {features.map((feature, index) => {
             const Icon = feature.icon;
             return (
-              <Card key={index} className="text-center hover:shadow-lg transition-all duration-300 border-0 shadow-md">
+              <Card key={index} className="text-center hover:shadow-lg transition-all duration-300 border-0 shadow-md bg-white/90 backdrop-blur-sm">
                 <CardContent className="p-6">
                   <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Icon className="h-8 w-8 text-primary" />

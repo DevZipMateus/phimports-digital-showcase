@@ -11,14 +11,7 @@ const Hero = () => {
   return (
     <section 
       id="inicio" 
-      className="min-h-screen flex items-center justify-center pt-20 relative"
-      style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/lovable-uploads/7d01e03b-4afb-4c3f-bdf3-11e78d572007.png')`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        backgroundAttachment: 'fixed'
-      }}
+      className="min-h-screen flex items-center justify-center pt-20 relative bg-black/20 backdrop-blur-sm"
     >
       <div className="container mx-auto px-4 py-16 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
