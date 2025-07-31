@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from 'react';
-import { Menu, X, Smartphone, Settings, MapPin, MessageCircle, Info, Home } from 'lucide-react';
+import { Menu, X, Settings, MapPin, MessageCircle, Info, Home } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Header = () => {
@@ -28,7 +28,7 @@ const Header = () => {
     { id: 'inicio', label: 'Início', icon: Home },
     { id: 'sobre', label: 'Sobre', icon: Info },
     { id: 'servicos', label: 'Serviços', icon: Settings },
-    { id: 'planos', label: 'Planos', icon: Smartphone },
+    { id: 'planos', label: 'Planos', icon: Settings },
     { id: 'depoimentos', label: 'Depoimentos', icon: MessageCircle },
     { id: 'localizacao', label: 'Localização', icon: MapPin },
     { id: 'contato', label: 'Contato', icon: MessageCircle },
@@ -41,9 +41,13 @@ const Header = () => {
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <div className="bg-primary text-white p-2 rounded-lg">
-              <Smartphone className="h-6 w-6" />
+          <div className="flex items-center space-x-3">
+            <div className="w-12 h-12">
+              <img 
+                src="/lovable-uploads/cae0091f-af63-4967-b850-edd359977cb6.png" 
+                alt="PH IMPORTS Logo"
+                className="w-full h-full object-contain"
+              />
             </div>
             <div>
               <h1 className="font-poppins font-bold text-lg text-primary">PH IMPORTS</h1>
