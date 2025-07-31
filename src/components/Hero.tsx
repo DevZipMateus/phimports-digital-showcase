@@ -9,20 +9,30 @@ const Hero = () => {
   };
 
   return (
-    <section id="inicio" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-red-50 pt-20">
-      <div className="container mx-auto px-4 py-16">
+    <section 
+      id="inicio" 
+      className="min-h-screen flex items-center justify-center pt-20 relative"
+      style={{
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/lovable-uploads/7d01e03b-4afb-4c3f-bdf3-11e78d572007.png')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundAttachment: 'fixed'
+      }}
+    >
+      <div className="container mx-auto px-4 py-16 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="text-center lg:text-left animate-fade-in">
             <Badge className="mb-6 bg-accent text-white px-4 py-2 text-sm font-medium">
               🥇 Melhor Preço da Feira dos Importados
             </Badge>
             
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 font-poppins leading-tight">
-              <span className="text-primary">iPhone</span> no boleto
-              <br />até <span className="text-accent">24x</span>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 font-poppins leading-tight">
+              <span className="text-blue-300">iPhone</span> no boleto
+              <br />até <span className="text-red-300">24x</span>
             </h1>
             
-            <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+            <p className="text-xl text-gray-100 mb-8 leading-relaxed">
               Especialista em produtos Apple com assistência técnica especializada. 
               Aceitamos seu iPhone na troca!
             </p>
@@ -30,7 +40,7 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
               <Button 
                 size="lg" 
-                className="bg-primary hover:bg-primary/90 text-white px-8 py-3 text-lg"
+                className="bg-primary hover:bg-primary/90 text-white px-8 py-3 text-lg shadow-lg"
                 onClick={scrollToContact}
               >
                 Falar no WhatsApp
@@ -40,7 +50,7 @@ const Hero = () => {
               <Button 
                 variant="outline" 
                 size="lg" 
-                className="border-2 border-primary text-primary hover:bg-primary hover:text-white px-8 py-3 text-lg"
+                className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-3 text-lg backdrop-blur-sm bg-white/10"
                 onClick={() => document.getElementById('servicos')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Nossos Serviços
@@ -49,23 +59,23 @@ const Hero = () => {
 
             {/* Features */}
             <div className="grid sm:grid-cols-3 gap-4">
-              <div className="flex items-center space-x-2 text-gray-600">
-                <CreditCard className="h-5 w-5 text-primary" />
+              <div className="flex items-center space-x-2 text-gray-200">
+                <CreditCard className="h-5 w-5 text-blue-300" />
                 <span className="text-sm">Parcelamento até 24x</span>
               </div>
-              <div className="flex items-center space-x-2 text-gray-600">
-                <Shield className="h-5 w-5 text-primary" />
+              <div className="flex items-center space-x-2 text-gray-200">
+                <Shield className="h-5 w-5 text-blue-300" />
                 <span className="text-sm">Assistência Especializada</span>
               </div>
-              <div className="flex items-center space-x-2 text-gray-600">
-                <Smartphone className="h-5 w-5 text-primary" />
+              <div className="flex items-center space-x-2 text-gray-200">
+                <Smartphone className="h-5 w-5 text-blue-300" />
                 <span className="text-sm">Troca de Aparelhos</span>
               </div>
             </div>
           </div>
 
           <div className="relative animate-bounce-in">
-            <div className="relative z-10 bg-white rounded-3xl shadow-2xl p-8">
+            <div className="relative z-10 bg-white/90 backdrop-blur-sm rounded-3xl shadow-2xl p-8">
               <div className="bg-gradient-to-br from-primary to-accent rounded-2xl p-6 text-white text-center">
                 <Smartphone className="h-16 w-16 mx-auto mb-4" />
                 <h3 className="text-2xl font-bold mb-2">iPhone 15 Pro</h3>
@@ -85,8 +95,8 @@ const Hero = () => {
             </div>
             
             {/* Background decoration */}
-            <div className="absolute -top-4 -right-4 w-72 h-72 bg-primary/10 rounded-full blur-3xl -z-10"></div>
-            <div className="absolute -bottom-4 -left-4 w-72 h-72 bg-accent/10 rounded-full blur-3xl -z-10"></div>
+            <div className="absolute -top-4 -right-4 w-72 h-72 bg-white/5 rounded-full blur-3xl -z-10"></div>
+            <div className="absolute -bottom-4 -left-4 w-72 h-72 bg-white/5 rounded-full blur-3xl -z-10"></div>
           </div>
         </div>
       </div>
