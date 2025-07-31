@@ -2,6 +2,7 @@
 import { ArrowRight, Star, Shield, CreditCard, Smartphone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
+import ImageCarousel from './ImageCarousel';
 
 const Hero = () => {
   const scrollToContact = () => {
@@ -74,24 +75,8 @@ const Hero = () => {
           </div>
 
           <div className="relative animate-bounce-in">
-            <div className="relative z-10 bg-white/90 backdrop-blur-sm rounded-3xl shadow-2xl p-8">
-              <div className="bg-gradient-to-br from-primary to-accent rounded-2xl p-6 text-white text-center">
-                <Smartphone className="h-16 w-16 mx-auto mb-4" />
-                <h3 className="text-2xl font-bold mb-2">iPhone 15 Pro</h3>
-                <p className="text-blue-100 mb-4">A partir de R$ 5.999</p>
-                <div className="flex items-center justify-center space-x-1 mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-                  ))}
-                </div>
-                <Button 
-                  className="w-full bg-white text-primary hover:bg-gray-100"
-                  onClick={scrollToContact}
-                >
-                  Consultar Preço
-                </Button>
-              </div>
-            </div>
+            {/* Carousel Container */}
+            <ImageCarousel />
             
             {/* Background decoration */}
             <div className="absolute -top-4 -right-4 w-72 h-72 bg-white/5 rounded-full blur-3xl -z-10"></div>
