@@ -1,5 +1,5 @@
 
-import { ArrowRight, Star, Shield, CreditCard, Smartphone } from 'lucide-react';
+import { ArrowRight, Star, Shield, CreditCard, Smartphone, BookOpen } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import ImageCarousel from './ImageCarousel';
@@ -7,6 +7,10 @@ import ImageCarousel from './ImageCarousel';
 const Hero = () => {
   const scrollToContact = () => {
     document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const openCatalog = () => {
+    window.open('https://phimports01.my.canva.site/dagpdqoq1qy?fbclid=PAQ0xDSwL4hkFleHRuA2FlbQIxMQABp8DOFNlj8-lssiwQdLKYAdaBIK2eUtPeMI4oiLQXaSQjoBWZySRlk0_dGccm_aem_CoObOXyo1Xa35M7s38NiOA', '_blank');
   };
 
   return (
@@ -37,7 +41,7 @@ const Hero = () => {
               Aceitamos seu iPhone na troca!
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 mb-8">
+            <div className="flex flex-col sm:flex-row gap-4 mb-6">
               <Button 
                 size="lg" 
                 className="bg-primary hover:bg-primary/90 text-white px-8 py-3 text-lg shadow-lg"
@@ -54,6 +58,18 @@ const Hero = () => {
                 onClick={() => document.getElementById('servicos')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Nossos Serviços
+              </Button>
+            </div>
+
+            {/* Novo botão do catálogo */}
+            <div className="mb-8">
+              <Button 
+                size="lg" 
+                className="bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-white px-8 py-3 text-lg shadow-lg w-full sm:w-auto"
+                onClick={openCatalog}
+              >
+                <BookOpen className="mr-2 h-5 w-5" />
+                Ver Nosso Catálogo
               </Button>
             </div>
 
