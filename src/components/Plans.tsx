@@ -1,3 +1,4 @@
+
 import { Check, Star, Smartphone, CreditCard } from 'lucide-react';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -7,14 +8,12 @@ const Plans = () => {
   const plans = [
     {
       name: 'iPhone SE',
-      price: 'A partir de R$ 2.499',
-      originalPrice: 'R$ 2.999',
       image: 'https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?auto=format&fit=crop&w=400&q=80',
       features: [
         'Tela 4.7" Retina HD',
         'Chip A15 Bionic',
         'Câmera 12MP',
-        'Parcelamento até 24x',
+        'Parcelamento disponível',
         '6 meses de garantia',
         'Troca aceita'
       ],
@@ -22,14 +21,12 @@ const Plans = () => {
     },
     {
       name: 'iPhone 13',
-      price: 'A partir de R$ 4.299',
-      originalPrice: 'R$ 4.999',
       image: 'https://images.unsplash.com/photo-1512499617640-c74ae3a79d37?auto=format&fit=crop&w=400&q=80',
       features: [
         'Tela 6.1" Super Retina XDR',
         'Chip A15 Bionic',
         'Sistema câmera dupla 12MP',
-        'Parcelamento até 24x',
+        'Parcelamento disponível',
         '12 meses de garantia',
         'Troca aceita'
       ],
@@ -37,14 +34,12 @@ const Plans = () => {
     },
     {
       name: 'iPhone 15 Pro',
-      price: 'A partir de R$ 7.999',
-      originalPrice: 'R$ 9.499',
       image: 'https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&w=400&q=80',
       features: [
         'Tela 6.1" Super Retina XDR',
         'Chip A17 Pro',
         'Sistema câmera Pro 48MP',
-        'Parcelamento até 24x',
+        'Parcelamento disponível',
         '12 meses de garantia',
         'Troca aceita'
       ],
@@ -60,7 +55,7 @@ const Plans = () => {
             Nossos <span className="text-primary">Planos</span> e Ofertas
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            iPhone no boleto parcelado em até 24x. Ofertas especiais e os melhores preços da região.
+            iPhone parcelado em até 24x. Ofertas especiais e os melhores produtos da região.
           </p>
         </div>
 
@@ -82,10 +77,6 @@ const Plans = () => {
                   />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900">{plan.name}</h3>
-                <div className="space-y-1">
-                  <p className="text-3xl font-bold text-primary">{plan.price}</p>
-                  <p className="text-lg text-gray-500 line-through">{plan.originalPrice}</p>
-                </div>
               </CardHeader>
 
               <CardContent className="pt-0">
@@ -126,8 +117,7 @@ const Plans = () => {
                 <h3 className="text-2xl font-bold">Parcelamento Facilitado</h3>
               </div>
               <p className="text-blue-100 mb-4 text-lg">
-                iPhone no boleto parcelado em até 24x sem juros. 
-                Entrada a partir de R$ 299.
+                iPhone parcelado em até 24x sem juros.
               </p>
               <ul className="space-y-2 text-blue-100">
                 <li className="flex items-center">
