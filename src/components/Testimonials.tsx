@@ -1,3 +1,4 @@
+
 import { Star, Quote } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 
@@ -7,43 +8,37 @@ const Testimonials = () => {
       name: 'Maria Silva',
       role: 'Cliente Satisfeita',
       content: 'Loja completa, atendimento 1000%, melhor preço da feira dos importados! Comprei meu iPhone 13 e ficou perfeito.',
-      rating: 5,
-      image: 'https://images.unsplash.com/photo-1494790108755-2616b612b5c5?auto=format&fit=crop&w=150&q=80'
+      rating: 5
     },
     {
       name: 'João Santos',
       role: 'Cliente Fidelizado',
       content: 'Assistência técnica impecável! Consertaram meu iPhone que estava com a tela quebrada. Ficou como novo!',
-      rating: 5,
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80'
+      rating: 5
     },
     {
       name: 'Ana Costa',
       role: 'Cliente Premium',
       content: 'Parcelaram meu iPhone em 24x sem juros. Atendimento diferenciado e produtos originais. Recomendo!',
-      rating: 5,
-      image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=150&q=80'
+      rating: 5
     },
     {
       name: 'Carlos Oliveira',
       role: 'Cliente Frequente',
       content: 'Melhor lugar para comprar iPhone em Brasília. Preço justo, qualidade garantida e ótimo atendimento.',
-      rating: 5,
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&q=80'
+      rating: 5
     },
     {
       name: 'Fernanda Lima',
       role: 'Cliente Satisfeita',
       content: 'Troquei meu iPhone antigo por um mais novo. O processo foi rápido e consegui um ótimo desconto.',
-      rating: 5,
-      image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=150&q=80'
+      rating: 5
     },
     {
       name: 'Ricardo Mendes',
       role: 'Cliente Recomenda',
       content: 'Assistência técnica de primeira qualidade. Resolveram um problema que outros lugares não conseguiram.',
-      rating: 5,
-      image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80'
+      rating: 5
     }
   ];
 
@@ -78,16 +73,9 @@ const Testimonials = () => {
                   ))}
                 </div>
                 
-                <div className="flex items-center">
-                  <img 
-                    src={testimonial.image} 
-                    alt={testimonial.name}
-                    className="w-12 h-12 rounded-full object-cover mr-4"
-                  />
-                  <div>
-                    <h4 className="font-semibold text-gray-900">{testimonial.name}</h4>
-                    <p className="text-sm text-gray-500">{testimonial.role}</p>
-                  </div>
+                <div>
+                  <h4 className="font-semibold text-gray-900">{testimonial.name}</h4>
+                  <p className="text-sm text-gray-500">{testimonial.role}</p>
                 </div>
               </CardContent>
             </Card>
