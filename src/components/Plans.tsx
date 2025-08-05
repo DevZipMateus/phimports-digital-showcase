@@ -1,4 +1,3 @@
-
 import { Check, Star, Smartphone, CreditCard } from 'lucide-react';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -10,9 +9,6 @@ const Plans = () => {
       name: 'iPhone SE',
       image: 'https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?auto=format&fit=crop&w=400&q=80',
       features: [
-        'Tela 4.7" Retina HD',
-        'Chip A15 Bionic',
-        'Câmera 12MP',
         'Parcelamento disponível',
         '6 meses de garantia',
         'Troca aceita'
@@ -23,9 +19,6 @@ const Plans = () => {
       name: 'iPhone 13',
       image: 'https://images.unsplash.com/photo-1512499617640-c74ae3a79d37?auto=format&fit=crop&w=400&q=80',
       features: [
-        'Tela 6.1" Super Retina XDR',
-        'Chip A15 Bionic',
-        'Sistema câmera dupla 12MP',
         'Parcelamento disponível',
         '12 meses de garantia',
         'Troca aceita'
@@ -36,9 +29,6 @@ const Plans = () => {
       name: 'iPhone 15 Pro',
       image: 'https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&w=400&q=80',
       features: [
-        'Tela 6.1" Super Retina XDR',
-        'Chip A17 Pro',
-        'Sistema câmera Pro 48MP',
         'Parcelamento disponível',
         '12 meses de garantia',
         'Troca aceita'
