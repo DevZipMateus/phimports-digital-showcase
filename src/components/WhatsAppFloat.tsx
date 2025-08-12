@@ -52,17 +52,22 @@ const WhatsAppFloat = () => {
             </div>
           )}
 
-          {/* Botão */}
+          {/* Botão com imagem do WhatsApp */}
           <button
             onClick={openWhatsApp}
             className={`
-              bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg 
+              relative w-16 h-16 rounded-full shadow-lg 
               transition-all duration-300 transform hover:scale-110
               ${isHovered ? 'shadow-2xl' : 'shadow-lg'}
+              overflow-hidden
             `}
             aria-label="Falar no WhatsApp"
           >
-            <MessageCircle className="h-6 w-6" />
+            <img 
+              src="/lovable-uploads/b15d7acd-bf24-44a3-bde8-37a5546c00fa.png" 
+              alt="WhatsApp" 
+              className="w-full h-full object-cover"
+            />
           </button>
 
           {/* Pulse Animation */}
