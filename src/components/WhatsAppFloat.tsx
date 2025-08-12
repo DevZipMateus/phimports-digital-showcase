@@ -10,51 +10,9 @@ const WhatsAppFloat = () => {
     const phoneNumber = "5561982865902";
     const message = "Olá! Vim pelo site e gostaria de saber mais sobre os produtos Apple disponíveis.";
     const encodedMessage = encodeURIComponent(message);
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
     
-    // Detectar se é dispositivo móvel
-    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-    
-    console.log('Dispositivo móvel detectado:', isMobile);
-    console.log('Tentando abrir WhatsApp para:', phoneNumber);
-    console.log('Mensagem:', message);
-    
-    let whatsappUrl;
-    
-    if (isMobile) {
-      // Para dispositivos móveis - tenta abrir o app do WhatsApp
-      whatsappUrl = `whatsapp://send?phone=${phoneNumber}&text=${encodedMessage}`;
-      console.log('URL móvel:', whatsappUrl);
-      
-      // Tenta abrir o app
-      const link = document.createElement('a');
-      link.href = whatsappUrl;
-      link.click();
-      
-      // Fallback para WhatsApp Web após 1 segundo se o app não abrir
-      setTimeout(() => {
-        const webUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-        console.log('Fallback para Web URL:', webUrl);
-        window.open(webUrl, '_blank', 'noopener,noreferrer');
-      }, 1000);
-      
-    } else {
-      // Para desktop - usa WhatsApp Web diretamente
-      whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-      console.log('URL desktop:', whatsappUrl);
-      
-      try {
-        const newWindow = window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
-        if (!newWindow) {
-          console.warn('Pop-up bloqueado, tentando método alternativo');
-          // Fallback se pop-up for bloqueado
-          window.location.href = whatsappUrl;
-        }
-      } catch (error) {
-        console.error('Erro ao abrir WhatsApp:', error);
-        // Último fallback
-        window.location.href = whatsappUrl;
-      }
-    }
+    window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
   };
 
   const hideTooltip = () => {
