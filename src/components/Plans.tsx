@@ -2,43 +2,24 @@ import { Check, Star, Smartphone, CreditCard } from 'lucide-react';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-
 const Plans = () => {
-  const plans = [
-    {
-      name: 'iPhone SE',
-      image: 'https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?auto=format&fit=crop&w=400&q=80',
-      features: [
-        'Parcelamento disponível',
-        '6 meses de garantia',
-        'Troca aceita'
-      ],
-      badge: 'Mais Vendido'
-    },
-    {
-      name: 'iPhone 13',
-      image: 'https://images.unsplash.com/photo-1512499617640-c74ae3a79d37?auto=format&fit=crop&w=400&q=80',
-      features: [
-        'Parcelamento disponível',
-        '12 meses de garantia',
-        'Troca aceita'
-      ],
-      badge: 'Recomendado'
-    },
-    {
-      name: 'iPhone 15 Pro',
-      image: 'https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&w=400&q=80',
-      features: [
-        'Parcelamento disponível',
-        '12 meses de garantia',
-        'Troca aceita'
-      ],
-      badge: 'Lançamento'
-    }
-  ];
-
-  return (
-    <section id="planos" className="py-20 bg-black/40 backdrop-blur-sm">
+  const plans = [{
+    name: 'iPhone SE',
+    image: 'https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?auto=format&fit=crop&w=400&q=80',
+    features: ['Parcelamento disponível', '6 meses de garantia', 'Troca aceita'],
+    badge: 'Mais Vendido'
+  }, {
+    name: 'iPhone 13',
+    image: 'https://images.unsplash.com/photo-1512499617640-c74ae3a79d37?auto=format&fit=crop&w=400&q=80',
+    features: ['Parcelamento disponível', '12 meses de garantia', 'Troca aceita'],
+    badge: 'Recomendado'
+  }, {
+    name: 'iPhone 15 Pro',
+    image: 'https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&w=400&q=80',
+    features: ['Parcelamento disponível', '12 meses de garantia', 'Troca aceita'],
+    badge: 'Lançamento'
+  }];
+  return <section id="planos" className="py-20 bg-black/40 backdrop-blur-sm">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-lg">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 font-poppins">
@@ -50,53 +31,40 @@ const Plans = () => {
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 mb-12">
-          {plans.map((plan, index) => (
-            <Card key={index} className="relative overflow-hidden hover:shadow-2xl transition-all duration-300 border-2 hover:border-primary/20 bg-white/90 backdrop-blur-sm">
-              {plan.badge && (
-                <Badge className="absolute top-4 right-4 bg-accent text-white z-10">
+          {plans.map((plan, index) => <Card key={index} className="relative overflow-hidden hover:shadow-2xl transition-all duration-300 border-2 hover:border-primary/20 bg-white/90 backdrop-blur-sm">
+              {plan.badge && <Badge className="absolute top-4 right-4 bg-accent text-white z-10">
                   {plan.badge}
-                </Badge>
-              )}
+                </Badge>}
               
               <CardHeader className="text-center pb-4">
                 <div className="relative mx-auto mb-4">
-                  <img 
-                    src={plan.image} 
-                    alt={plan.name}
-                    className="w-32 h-32 object-cover rounded-2xl mx-auto shadow-lg"
-                  />
+                  <img src={plan.image} alt={plan.name} className="w-32 h-32 object-cover rounded-2xl mx-auto shadow-lg" />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900">{plan.name}</h3>
               </CardHeader>
 
               <CardContent className="pt-0">
                 <ul className="space-y-3 mb-6">
-                  {plan.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-gray-600">
+                  {plan.features.map((feature, idx) => <li key={idx} className="flex items-center text-gray-600">
                       <Check className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
                       <span className="text-sm">{feature}</span>
-                    </li>
-                  ))}
+                    </li>)}
                 </ul>
 
                 <div className="space-y-3">
-                  <Button 
-                    className="w-full bg-primary hover:bg-primary/90 text-white"
-                    onClick={() => document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' })}
-                  >
+                  <Button className="w-full bg-primary hover:bg-primary/90 text-white" onClick={() => document.getElementById('contato')?.scrollIntoView({
+                behavior: 'smooth'
+              })}>
                     Comprar Agora
                   </Button>
-                  <Button 
-                    variant="outline" 
-                    className="w-full border-primary text-primary hover:bg-primary hover:text-white"
-                    onClick={() => document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' })}
-                  >
+                  <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary hover:text-white" onClick={() => document.getElementById('contato')?.scrollIntoView({
+                behavior: 'smooth'
+              })}>
                     Mais Informações
                   </Button>
                 </div>
               </CardContent>
-            </Card>
-          ))}
+            </Card>)}
         </div>
 
         <div className="grid md:grid-cols-2 gap-8">
@@ -106,9 +74,7 @@ const Plans = () => {
                 <CreditCard className="h-8 w-8 mr-3" />
                 <h3 className="text-2xl font-bold">Parcelamento Facilitado</h3>
               </div>
-              <p className="text-blue-100 mb-4 text-lg">
-                iPhone parcelado em até 24x sem juros.
-              </p>
+              <p className="text-blue-100 mb-4 text-lg">iPhone parcelado em até 24x.</p>
               <ul className="space-y-2 text-blue-100">
                 <li className="flex items-center">
                   <Check className="h-4 w-4 mr-2" />
@@ -154,8 +120,6 @@ const Plans = () => {
           </Card>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Plans;
