@@ -82,7 +82,9 @@ const Footer = () => {
         <div className="border-t border-gray-800 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-gray-400 text-sm">
-              © 2024 PH IMPORTS BRASÍLIA. Todos os direitos reservados.
+              <div>© 2024 PH IMPORTS BRASÍLIA. Todos os direitos reservados.</div>
+              <div className="mt-1">CNPJ: 44.585.311/0001-35</div>
+              <div className="mt-1">Desenvolvido por <span className="text-white font-medium">MonteSite</span></div>
             </div>
             <div className="flex space-x-6">
               <a 
