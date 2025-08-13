@@ -1,4 +1,3 @@
-
 import { MapPin, Clock, Phone, Navigation } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -58,9 +57,8 @@ const Location = () => {
                   <div>
                     <h3 className="font-bold text-lg text-gray-900 mb-2">Horário de Funcionamento</h3>
                     <div className="text-gray-600 space-y-1">
-                      <p>Segunda a Sexta: 8h às 18h</p>
-                      <p>Sábado: 8h às 17h</p>
-                      <p>Domingo: 8h às 13h</p>
+                      <p>Segunda: Online das 9h às 18h</p>
+                      <p>Terça a Domingo: Loja física das 9h às 18h</p>
                     </div>
                   </div>
                 </div>
@@ -139,7 +137,7 @@ const Location = () => {
                 <Clock className="h-8 w-8 text-white" />
               </div>
               <h4 className="font-semibold text-white">Horário Amplo</h4>
-              <p className="text-gray-100 text-sm">Funcionamos todos os dias</p>
+              <p className="text-gray-100 text-sm">Terça a domingo na loja física</p>
             </div>
             <div className="space-y-2">
               <div className="bg-white/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto">

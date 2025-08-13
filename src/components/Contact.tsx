@@ -1,4 +1,3 @@
-
 import { Phone, Mail, MessageCircle, Instagram, MapPin, Clock } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -115,16 +114,12 @@ const Contact = () => {
               </div>
               <div className="space-y-3 text-gray-300">
                 <div className="flex justify-between">
-                  <span>Segunda a Sexta:</span>
-                  <span className="text-white font-semibold">8h às 18h</span>
+                  <span>Segunda:</span>
+                  <span className="text-white font-semibold">Online das 9h às 18h</span>
                 </div>
                 <div className="flex justify-between">
-                  <span>Sábado:</span>
-                  <span className="text-white font-semibold">8h às 17h</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Domingo:</span>
-                  <span className="text-white font-semibold">8h às 13h</span>
+                  <span>Terça a Domingo:</span>
+                  <span className="text-white font-semibold">Loja física das 9h às 18h</span>
                 </div>
               </div>
             </CardContent>
